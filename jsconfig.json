@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs"
+    },
+    "files": [
+        "/typings/react/react.d.ts",
+        "ContactItem.js",
+        "ContactForm.js",
+        "ContactView.js",
+        "main.js",
+        "/stores/contactsstore.js",
+        "/stores/contactsactions.js"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "react-reflux-jquery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauricionr/SharePointReactJSRefluxJquery.git"
+  },
+  "keywords": [
+    "ReactJS",
+    "Reflux",
+    "Jquery",
+    "JsonPlaceHolder",
+    "SharePoint"
+  ],
+  "author": "mauricionunesreis.com.br",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauricionr/SharePointReactJSRefluxJquery/issues"
+  },
+  "homepage": "https://github.com/mauricionr/SharePointReactJSRefluxJquery#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
