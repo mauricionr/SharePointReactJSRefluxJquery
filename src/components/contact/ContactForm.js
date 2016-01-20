@@ -1,42 +1,45 @@
+/* global React */
 var ContactForm = React.createClass({
-  propTypes: {
-    contact: React.PropTypes.object.isRequired,
-    contacts:React.PropTypes.array.isRequired
-  },
   getInitialState:function(){
   	return {
-  		contact:this.props.contact,
-  		contacts:this.props.contacts
+  		newContact:{}
   	}
   },
   addListItem:function(){
-  	this.props.contact.Title = this.refs.Title.value;
-  	this.props.contact.Email = this.refs.Email.value;
-  	this.props.contact.Description = this.refs.Description.value;
-    ContactsStore.onCreateItem(this.props.contact)
+    ContactsStore.onCreateItem(this.state.newContact)
     this.setState({
-    	contact:newContact
+    	newContact:{}
     });
+    for(var key in this.refs){
+		this.refs[key].value = '';
+    }
+  },
+  handleChange:function(Field,event){
+  	 this.state.newContact[Field] = event.target.value
+  	 this.setState({
+  	 	obj: this.state.obj,
+  	 	isEditing:true
+  	 });
   },
   render: function() {
     return (
       React.createElement('div', {className: 'ContactForm'},
         React.createElement('input', {
-          ref:"Title",
+          ref:'Title',
           type: 'text',
           placeholder: 'Title (required)',
-          value: this.props.contact.name,
+          onChange:this.handleChange.bind(null,'Title')
         }),
         React.createElement('input', {
-	      ref:"Email",
-          type: 'email',
+          ref:'Email',
+          type: 'text',
           placeholder: 'Email',
-          value: this.props.contact.email,
+          onChange:this.handleChange.bind(null,'Email')
         }),
         React.createElement('textarea', {
-          ref:"Description",
+          ref:'Description',
           placeholder: 'Description',
-          value: this.props.contact.description,
+          onChange:this.handleChange.bind(null,'Description')
         }),
         React.createElement('button', {type: 'button', onClick:this.addListItem}, "Add Contact")
       )

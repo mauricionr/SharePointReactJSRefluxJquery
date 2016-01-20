@@ -1,4 +1,6 @@
-﻿var ContactsStore = Reflux.createStore({
+﻿/* global ContactsActions */
+/* global _spPageContextInfo */
+var ContactsStore = Reflux.createStore({
     listenables: [ContactsActions],
     contactslist: [],
     listTitle:'Contacts',

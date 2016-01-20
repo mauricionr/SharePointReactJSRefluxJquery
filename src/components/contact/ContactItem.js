@@ -1,9 +1,5 @@
+/* global ContactsStore */
 var ContactItem = React.createClass({
-  propTypes: {
-    Title: React.PropTypes.string,
-    Description: React.PropTypes.string,
-    Email: React.PropTypes.string,
-  },
   getInitialState:function(){
   	return {
   		isEditing:false,

@@ -1,8 +1,4 @@
-/* global ReactDOM */
-var newContact = {Title: null, Email: null, Description: null}
 ReactDOM.render(
-  React.createElement(ContactView, {
-    newContact: newContact
-  }),
+  React.createElement(ContactView),
   document.getElementById('react-app')
 )
